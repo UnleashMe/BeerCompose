@@ -3,8 +3,10 @@
 ## Introduction
 This is my first project and it's an app for a beer bar. 
 
-## Tcchnologies I've used in this project
+## Technologies I've used in this project
 - Language: Kotlin
+- Architecture: MVVM with usecases
+- UI: Compose
 - Coroutines
 - Room
 - Retrofit
@@ -25,3 +27,8 @@ So when first launched app downloads the menu items from the server my friend ha
 Then eventually the data is loaded and it's being cashed to local database, so we don't need to use the server every time. On admin options add, update and delete the app first sends query to server, then waits for response and, if it's successful, sends the same query to database, so there won't be difference between our sources.
 On user's registration their information is saved to database, although the password is hashed, so there's some protection. Database consists of 4 tables: Menu items, users, and their join tables - likes and cart.
 When logged, user is saved to dataStore, so there's no need to repeat this on every launch.
+
+There's an option to use the app with a local API, which has quicker response and better images, but the downside is it's local. To use it you need to:
+- download the project from here https://github.com/UnleashMe/ktor-beers-local and launch it in Intellij IDEA.
+- in app/src/main/java/com/example/beercompose/util/Constants.kt uncomment commented BASE_URL and comment the one, that's been used before.
+- in app/src/main/java/com/example/beercompose/util/mapper/MenuItemMapper.kt change imagePath to commented one
