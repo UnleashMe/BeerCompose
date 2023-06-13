@@ -32,3 +32,6 @@ There's an option to use the app with a local API, which has quicker response an
 - download the project from here https://github.com/UnleashMe/ktor-beers-local and launch it in Intellij IDEA.
 - in app/src/main/java/com/example/beercompose/util/Constants.kt uncomment commented BASE_URL and comment the one, that's been used before.
 - in app/src/main/java/com/example/beercompose/util/mapper/MenuItemMapper.kt change imagePath to commented one
+
+### XML version
+Identical app, built with XML-files instead of Compose: https://github.com/UnleashMe/MrBeers-Android-App
